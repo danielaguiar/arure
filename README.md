@@ -28,15 +28,22 @@ Antes de começar, certifique-se de:
 1. Clique em **"Criar" > "Máquina virtual"**
 2. Preencha as informações básicas:
 
+2.1 - Detalhes do projeto
    - **Assinatura**: escolha sua assinatura ativa
    - **Grupo de recursos**: crie um novo ou selecione um existente
+  
+2.2 - Detalhes da instância
    - **Nome da máquina virtual**: escolha um nome descritivo
    - **Região**: selecione a localização geográfica
+   - **Opções de disponibilidade**: zona de disponibilizada
+   - **Tipo de segurança**: tipo de segurança na inicilização
    - **Imagem (SO)**: escolha o sistema operacional (ex: Ubuntu, Windows Server)
+   - **Arquitetura de VM**: escolha entre arm64 ou x64
    - **Tamanho**: escolha o tamanho da VM com base em CPU/RAM
-   - **Usuário administrador**: configure login e senha ou chave SSH
 
----
+2.3 - Conta de administrador
+   - **Tipo de Autenticação**: tipo de autenticação: chave publica de ssh ou senha
+   - **nome de usuário**: nome do usuário administrador de vm
 
 ### 3. Configurações de Disco
 
@@ -54,19 +61,9 @@ Antes de começar, certifique-se de:
   - SSH (22) para Linux
   - RDP (3389) para Windows
 
----
-
 ### 5. Revisar e Criar
 
 1. Revise todas as configurações
 2. Clique em **"Criar"**
 3. Aguarde a implantação ser concluída
 
----
-
-## 🔗 Acessando a VM
-
-### Linux (via SSH)
-
-```bash
-ssh <usuário>@<ip-publico>
